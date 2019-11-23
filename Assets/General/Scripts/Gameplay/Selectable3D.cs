@@ -17,25 +17,19 @@ using UnityEditorInternal;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+
 namespace Game
 {
-    [DefaultExecutionOrder(ExecutionOrder)]
-	public class Core : MonoBehaviour
-	{
-        public const int ExecutionOrder = -200;
-
-		public static Core Instance { get; protected set; }
-
-        private void Awake()
+    public class Selectable3D : MonoBehaviour, IPointerClickHandler
+    {
+        [SerializeField]
+        protected UnityEvent pointerClick;
+        public UnityEvent PointerClick { get { return pointerClick; } }
+        public void OnPointerClick(PointerEventData eventData)
         {
-            Instance = this;
-
-            DontDestroyOnLoad(gameObject);
-        }
-
-        private void Start()
-        {
-            Application.targetFrameRate = 60;
+            pointerClick.Invoke();
         }
     }
 }
