@@ -26,11 +26,15 @@ namespace Game
         Vector2 delta;
         public Vector2 Delta => delta;
 
+        [SerializeField]
+        protected float gravity;
+        public float Gravity { get { return gravity; } }
+
         int? PointerID;
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            if(PointerID == null)
+            if (PointerID == null)
             {
                 PointerID = eventData.pointerId;
                 delta = Vector2.zero;
@@ -51,7 +55,7 @@ namespace Game
 
         private void LateUpdate()
         {
-            delta = Vector2.zero;
+            delta = Vector2.MoveTowards(delta, Vector2.zero, gravity * Time.deltaTime);
         }
 
         public void OnPointerExit(PointerEventData eventData)
@@ -59,7 +63,6 @@ namespace Game
             if(PointerID == eventData.pointerId)
             {
                 PointerID = null;
-                delta = Vector2.zero;
             }
         }
     }

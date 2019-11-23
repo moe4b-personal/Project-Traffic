@@ -49,6 +49,8 @@ namespace Game
         void ClickCallback(Car car)
         {
             onClick.Invoke(car);
+
+            car.rigidbody.AddForce(Vector3.up * 5, ForceMode.VelocityChange);
         }
     }
 }

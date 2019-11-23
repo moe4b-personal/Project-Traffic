@@ -25,11 +25,11 @@ namespace Game
         protected UIPanZone panZone;
         public UIPanZone PanZone { get { return panZone; } }
 
-        public Camera Component { get; protected set; }
-
         [SerializeField]
         protected float speed;
         public float Speed { get { return speed; } }
+
+        public Camera Component { get; protected set; }
 
         private void Awake()
         {
@@ -38,7 +38,7 @@ namespace Game
 
         private void Update()
         {
-            if(panZone.Delta.magnitude > 0f)
+            if (panZone.Delta.magnitude > 0f)
             {
                 transform.Rotate(Vector3.up, panZone.Delta.x * speed * Time.deltaTime, Space.World);
             }
