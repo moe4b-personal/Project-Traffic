@@ -24,6 +24,8 @@ namespace Game
 #pragma warning disable CS0108 // Member hides inherited member; missing new keyword
     public class Car : MonoBehaviour
 	{
+        public Honk Honk { get; protected set; }
+
         public CarDestination Destination { get; protected set; }
 
         public Rigidbody rigidbody { get; protected set; }
@@ -32,6 +34,8 @@ namespace Game
 
         private void Awake()
         {
+            Honk = GetComponentInChildren<Honk>();
+
             Destination = GetComponentInChildren<CarDestination>();
             Destination.Set(this);
 
@@ -47,7 +51,7 @@ namespace Game
 
         void ClickCallback()
         {
-            
+            Honk.Use();
         }
     }
 }
