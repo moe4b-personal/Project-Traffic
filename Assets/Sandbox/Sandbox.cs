@@ -29,31 +29,46 @@ namespace Game
 
         public float brake = 60f;
 
+        public float speed;
+        public float maxSpeed = 60f;
+
+        Vehicle vehicle;
+
         private void Awake()
         {
+            vehicle = GetComponent<Vehicle>();
+
             wheels = GetComponentsInChildren<Wheel>();
         }
 
         private void Update()
         {
+            speed = vehicle.rigidbody.velocity.magnitude * 3.6f;
+            if (speed > maxSpeed)
+                vehicle.rigidbody.velocity = vehicle.rigidbody.velocity.normalized * (maxSpeed / 3.6f);
+
             var vertical = Input.GetAxisRaw("Vertical");
             var horizontal = Input.GetAxis("Horizontal");
 
             foreach (var wheel in wheels)
             {
-                wheel.collider.motorTorque = torque * vertical;
+                if (wheel.drive)
+                    wheel.collider.motorTorque = torque * vertical;
 
-                if(wheel.transform.localPosition.z > 0f)
-                wheel.collider.steerAngle = horizontal * steer;
+                if (wheel.steer)
+                    wheel.collider.steerAngle = horizontal * steer;
 
-                if(Input.GetKey(KeyCode.Space))
+                if(wheel.brake)
                 {
-                    wheel.collider.motorTorque = 0f;
-                    wheel.collider.brakeTorque = Input.GetAxisRaw("Jump") * brake;
-                }
-                else
-                {
-                    wheel.collider.brakeTorque = 0f;
+                    if (Input.GetKey(KeyCode.Space))
+                    {
+                        wheel.collider.motorTorque = 0f;
+                        wheel.collider.brakeTorque = Input.GetAxisRaw("Jump") * brake;
+                    }
+                    else
+                    {
+                        wheel.collider.brakeTorque = 0f;
+                    }
                 }
             }
         }

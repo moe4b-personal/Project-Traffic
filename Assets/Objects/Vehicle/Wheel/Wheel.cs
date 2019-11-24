@@ -19,20 +19,40 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-    [RequireComponent(typeof(WheelCollider))]
 #pragma warning disable CS0108 // Member hides inherited member; missing new keyword
     public class Wheel : MonoBehaviour
 	{
+        public bool drive = true;
+
+        public bool brake = true;
+
+        public bool steer = true;
+
+        [SerializeField]
+        protected GameObject mesh;
+        public GameObject Mesh { get { return mesh; } }
+
         public WheelCollider collider { get; protected set; }
+
+        private void Reset()
+        {
+            mesh = GetComponentInChildren<Renderer>()?.gameObject;
+        }
 
         private void Awake()
         {
-            collider = GetComponent<WheelCollider>();
+            collider = GetComponentInChildren<WheelCollider>();
         }
+
+        Vector3 position;
+        Quaternion rotation;
 
         private void Update()
         {
-            transform.Rotate(collider.rpm / 60 * 360 * Time.deltaTime * Vector3.right, Space.Self);
+            collider.GetWorldPose(out position, out rotation);
+
+            mesh.transform.position = position;
+            mesh.transform.rotation = rotation;
         }
     }
 #pragma warning restore CS0108 // Member hides inherited member; missing new keyword

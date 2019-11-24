@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81746749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -50, y: 0, z: -50}
+  m_LocalPosition: {x: -50, y: -19.85, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1270058928}
@@ -514,11 +514,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car_4
       objectReference: {fileID: 0}
-    - target: {fileID: 1069058268947442849, guid: 334fa3e4a524b954e91866fbdf16c77c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1069058268947442848, guid: 334fa3e4a524b954e91866fbdf16c77c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -527,7 +522,7 @@ PrefabInstance:
     - target: {fileID: 1069058268947442848, guid: 334fa3e4a524b954e91866fbdf16c77c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.224
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1069058268947442848, guid: 334fa3e4a524b954e91866fbdf16c77c,
         type: 3}
@@ -542,7 +537,7 @@ PrefabInstance:
     - target: {fileID: 1069058268947442848, guid: 334fa3e4a524b954e91866fbdf16c77c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 1069058268947442848, guid: 334fa3e4a524b954e91866fbdf16c77c,
         type: 3}
@@ -552,7 +547,7 @@ PrefabInstance:
     - target: {fileID: 1069058268947442848, guid: 334fa3e4a524b954e91866fbdf16c77c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.70710695
       objectReference: {fileID: 0}
     - target: {fileID: 1069058268947442848, guid: 334fa3e4a524b954e91866fbdf16c77c,
         type: 3}
@@ -567,7 +562,7 @@ PrefabInstance:
     - target: {fileID: 1069058268947442848, guid: 334fa3e4a524b954e91866fbdf16c77c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90.00001
       objectReference: {fileID: 0}
     - target: {fileID: 1069058268947442848, guid: 334fa3e4a524b954e91866fbdf16c77c,
         type: 3}
@@ -578,115 +573,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1907442105}
-    - target: {fileID: 553909832833275179, guid: 334fa3e4a524b954e91866fbdf16c77c,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1300
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235227, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: torque
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235227, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: brake
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235239, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_ForwardFriction.m_Stiffness
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235239, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SidewaysFriction.m_Stiffness
-      value: 4.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235239, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_ForceAppPointDistance
-      value: 0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235239, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SuspensionSpring.targetPosition
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235239, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SuspensionDistance
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235239, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_Mass
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235237, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_ForwardFriction.m_Stiffness
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235237, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SidewaysFriction.m_Stiffness
-      value: 4.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235237, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_ForceAppPointDistance
-      value: 0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235237, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SuspensionSpring.targetPosition
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235237, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SuspensionDistance
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235237, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_Mass
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235235, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_ForwardFriction.m_Stiffness
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235235, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SidewaysFriction.m_Stiffness
-      value: 4.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235235, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_ForceAppPointDistance
-      value: 0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235235, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SuspensionSpring.targetPosition
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235235, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SuspensionDistance
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235235, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_Mass
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235233, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_ForwardFriction.m_Stiffness
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235233, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SidewaysFriction.m_Stiffness
-      value: 4.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235233, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_ForceAppPointDistance
-      value: 0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235233, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SuspensionSpring.targetPosition
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235233, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_SuspensionDistance
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 1876235233, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
-      propertyPath: m_Mass
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 334fa3e4a524b954e91866fbdf16c77c, type: 3}
 --- !u!1001 &303255008
@@ -2019,6 +1905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198543412}
   - component: {fileID: 1198543411}
+  - component: {fileID: 1198543413}
   m_Layer: 0
   m_Name: Camera Rig
   m_TagString: Untagged
@@ -2055,6 +1942,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 60, z: 0}
+--- !u!1818360608 &1198543413
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198543410}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffset: {x: 0, y: -1, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 2072441349}
+    weight: 1
 --- !u!1001 &1248696259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4032,6 +3938,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &2072441349 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1069058268947442848, guid: 334fa3e4a524b954e91866fbdf16c77c,
+    type: 3}
+  m_PrefabInstance: {fileID: 253929079}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2102070610
 PrefabInstance:
   m_ObjectHideFlags: 0
