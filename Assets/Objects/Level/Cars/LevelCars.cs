@@ -23,11 +23,11 @@ namespace Game
 {
 	public class LevelCars : MonoBehaviour
 	{
-		public Car[] List { get; protected set; }
+		public Vehicle[] List { get; protected set; }
 
         private void Awake()
         {
-            List = FindObjectsOfType<Car>();
+            List = FindObjectsOfType<Vehicle>();
         }
 
         private void Start()
@@ -42,15 +42,18 @@ namespace Game
         protected ClickEvent onClick;
         public ClickEvent OnClick { get { return onClick; } }
         [Serializable]
-        public class ClickEvent : UnityEvent<Car>
+        public class ClickEvent : UnityEvent<Vehicle>
         {
 
         }
-        void ClickCallback(Car car)
+        void ClickCallback(Vehicle car)
         {
             onClick.Invoke(car);
 
-            car.rigidbody.AddForce(Vector3.up * 5, ForceMode.VelocityChange);
+            //car.rigidbody.AddForce(Vector3.up * 5, ForceMode.VelocityChange);
+            var position = car.transform.position;
+            position.y = 1;
+            car.transform.position = position;
         }
     }
 }

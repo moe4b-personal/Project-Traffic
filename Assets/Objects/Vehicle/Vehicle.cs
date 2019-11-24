@@ -22,11 +22,11 @@ namespace Game
     [SelectionBase]
     [RequireComponent(typeof(Rigidbody))]
 #pragma warning disable CS0108 // Member hides inherited member; missing new keyword
-    public class Car : MonoBehaviour
+    public class Vehicle : MonoBehaviour
 	{
         public Honk Honk { get; protected set; }
 
-        public CarDestination Destination { get; protected set; }
+        public VehicleDestination Destination { get; protected set; }
 
         public Rigidbody rigidbody { get; protected set; }
 
@@ -36,7 +36,7 @@ namespace Game
         {
             Honk = GetComponentInChildren<Honk>();
 
-            Destination = GetComponentInChildren<CarDestination>();
+            Destination = GetComponentInChildren<VehicleDestination>();
             Destination.Set(this);
 
             rigidbody = GetComponent<Rigidbody>();

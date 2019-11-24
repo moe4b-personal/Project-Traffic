@@ -21,15 +21,15 @@ using UnityEngine.Events;
 
 namespace Game
 {
-	public class CarDestination : MonoBehaviour
+	public class VehicleDestination : MonoBehaviour
 	{
         [SerializeField]
         protected ExitArea target;
         public ExitArea Target { get { return target; } }
 
-        public Car Car { get; protected set; }
+        public Vehicle Car { get; protected set; }
 
-        public void Set(Car reference) => Car = reference;
+        public void Set(Vehicle reference) => Car = reference;
 
         private void Start()
         {
