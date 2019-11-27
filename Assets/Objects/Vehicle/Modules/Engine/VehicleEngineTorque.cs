@@ -34,7 +34,7 @@ namespace Game
         protected float drive;
         public float Drive { get { return drive; } }
 
-        float _value;
+        float _value = 0f;
         public float Value
         {
             get => _value;
@@ -62,7 +62,9 @@ namespace Game
             set
             {
                 if (Mathf.Approximately(value, 0f))
-                    Rate = 0f;
+                {
+                    this.Value = 0f;
+                }
                 else
                 {
                     var direction = Mathf.Sign(value);

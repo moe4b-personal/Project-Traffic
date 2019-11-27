@@ -19,14 +19,14 @@ using Random = UnityEngine.Random;
 
 namespace Game
 {
-	public class VehicleControSteerlUI : AxisToggleUI, IReference<Vehicle>
+	public class VehicleControThrottlelUI : AxisToggleUI, IReference<Vehicle>
     {
         public Vehicle Vehicle { get; protected set; }
         public void Set(Vehicle reference) => Vehicle = reference;
 
         protected override void ChangeCallback(float value)
         {
-            Vehicle.Wheels.Steer.Target = value;
+            Vehicle.Engine.Torque.Scale = value;
         }
     }
 }
