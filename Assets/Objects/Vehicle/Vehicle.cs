@@ -21,10 +21,17 @@ namespace Game
 {
     [SelectionBase]
     [RequireComponent(typeof(Rigidbody))]
+    [DefaultExecutionOrder(ExecutionOrder)]
 #pragma warning disable CS0108 // Member hides inherited member; missing new keyword
     public class Vehicle : MonoBehaviour
 	{
+        public const int ExecutionOrder = -20;
+
         public Honk Honk { get; protected set; }
+
+        public VehicleWheels Wheels { get; protected set; }
+
+        public VehicleEngine Engine { get; protected set; }
 
         public VehicleDestination Destination { get; protected set; }
 
@@ -34,14 +41,19 @@ namespace Game
 
         private void Awake()
         {
-            Honk = GetComponentInChildren<Honk>();
+            Honk = this.GetDependancy<Honk>();
 
-            Destination = GetComponentInChildren<VehicleDestination>();
-            Destination.Set(this);
+            Wheels = this.GetDependancy<VehicleWheels>();
 
-            rigidbody = GetComponent<Rigidbody>();
+            Engine = this.GetDependancy<VehicleEngine>();
 
-            Selectable = GetComponentInChildren<Selectable3D>();
+            Destination = this.GetDependancy<VehicleDestination>();
+
+            rigidbody = this.GetDependancy<Rigidbody>();
+
+            Selectable = this.GetDependancy<Selectable3D>();
+
+            References.Set(this);
         }
 
         private void Start()
