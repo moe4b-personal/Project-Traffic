@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 014d82456addd364d9a94132b938abbd, type: 3}
-  m_Name: Core Asset
+  m_Name: Core
   m_EditorClassIdentifier: 
   prefab: {fileID: 7550181448575538746, guid: 2a6d7551f8a2dd54b852a50b5d303eb7, type: 3}
